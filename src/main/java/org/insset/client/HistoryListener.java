@@ -10,6 +10,7 @@ import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.ui.RootPanel;
 import org.insset.client.exemple.ExemplePresenter;
 import org.insset.client.calculator.CalculatorDecimalPresenter;
+import org.insset.client.solde.SoldePresenter;
 
 /**
  *
@@ -32,8 +33,10 @@ public class HistoryListener implements ValueChangeHandler<String> {
             RootPanel.get().add(new ExemplePresenter());
         }
 
-        //Accès a la page pourcentage
-        //Add your code 
+        //Accès a la page solde
+        if (event.getValue().equals("solde")) {
+            RootPanel.get().clear();
+            RootPanel.get().add(new SoldePresenter());
+        }
     }
-
 }
