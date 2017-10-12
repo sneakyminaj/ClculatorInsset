@@ -49,6 +49,15 @@ public class FieldVerifierTest {
         assertEquals(expResult, result);
         
     }
+    @Test
+    public void testIsNotValidName() {
+        System.out.println("isNotValidName");
+        String name = "";
+        boolean expResult = false;
+        boolean result = FieldVerifier.isValidName(name);
+        assertEquals(expResult, result);
+        
+    }
 
     /**
      * Test of isValidDecimal method, of class FieldVerifier.
