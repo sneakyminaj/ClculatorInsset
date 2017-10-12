@@ -28,6 +28,15 @@
   </servlet-mapping>
   
   <!-- Add your servlet -->
+  <servlet>
+    <servlet-name>Solde</servlet-name>
+    <servlet-class>org.insset.server.SoldeServiceImpl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Solde</servlet-name>
+    <url-pattern>/calculatorInsset/solde</url-pattern>
+  </servlet-mapping>
+  
   
   <!-- Default page to serve -->
   <welcome-file-list>

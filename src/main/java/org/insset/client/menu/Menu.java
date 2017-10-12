@@ -61,7 +61,7 @@ public class Menu extends Composite {
             @Override
             public void execute() {
 
-                History.newItem("pourcentage", true);
+                History.newItem("solde", true);
             }
         });
         romain.setScheduledCommand(new Scheduler.ScheduledCommand() {
