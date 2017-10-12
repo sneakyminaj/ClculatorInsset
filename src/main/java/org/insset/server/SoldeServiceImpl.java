@@ -6,6 +6,8 @@
 package org.insset.server;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import org.insset.client.service.SoldeService;
 
 /**
@@ -16,8 +18,9 @@ public class SoldeServiceImpl extends RemoteServiceServlet implements SoldeServi
 
     @Override
     public Double calculSolde(String initAmnt, Integer perc) throws IllegalArgumentException {
-        return 25.01;
+        DecimalFormat hisFormat = new DecimalFormat("######.##");
+        hisFormat.setRoundingMode(RoundingMode.DOWN);
+        return Double.parseDouble(hisFormat.format( Double.parseDouble(initAmnt) * ( 1 - (perc/100.0) )));
     }
-    
 }
 
